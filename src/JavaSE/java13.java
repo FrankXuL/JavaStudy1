@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 求 N 的阶乘 。
  */
-public class Java13 {
+public class java13 {
     public static void main(String[] args) {
         int n = 5;
         System.out.println(Factorial(n));

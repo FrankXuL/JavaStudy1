@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 按顺序打印一个数字的每一位(例如 1234 打印出 1 2 3 4) （递归）
  */
-public class Java20 {
+public class java20 {
     public static void main(String[] args) {
         fun(1234);
     }

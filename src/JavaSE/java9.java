@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @Version 1.0
  * 输出一个整数的每一位，如：123的每一位是3，2，1
  */
-public class Java9 {
+public class java9 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int count = scanner.nextInt();

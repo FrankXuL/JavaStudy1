@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 写一个递归方法，输入一个非负整数，返回组成它的数字之和
  */
-public class Java21 {
+public class java21 {
     public static void main(String[] args) {
         System.out.println(fun(1234));
     }

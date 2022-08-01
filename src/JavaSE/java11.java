@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @Version 1.0
  * 获取一个数二进制序列中所有的偶数位和奇数位，分别输出二进制序列
  */
-public class Java11 {
+public class java11 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入一个数");

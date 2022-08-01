@@ -6,7 +6,7 @@ package JavaSE;
  * @Date: 2022/7/31 14:59
  * @Version 1.0
  */
-public class Java25 {
+public class java25 {
     public static void main(String[] args) {
         int[] arr =new int[10];
         for (int i = 0; i < 10; i++) {

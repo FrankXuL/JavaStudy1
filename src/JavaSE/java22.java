@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 递归求斐波那契数列的第 N 项
  */
-public class Java22 {
+public class java22 {
     public static void main(String[] args) {
         System.out.println(fun(8));
     }

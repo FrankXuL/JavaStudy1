@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 递归求 N 的阶乘
  */
-public class Java18 {
+public class java18 {
     public static void main(String[] args) {
         System.out.println(fun(3));
     }

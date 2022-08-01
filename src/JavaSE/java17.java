@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 在同一个类中定义多个方法：要求不仅可以求2个整数的最大值，还可以求3个小数的最大值
  */
-public class Java17 {
+public class java17 {
     public static void main(String[] args) {
         System.out.println(max(1,2));
         System.out.println(max(1.2,1.5,2.5));

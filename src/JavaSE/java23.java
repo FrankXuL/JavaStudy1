@@ -6,7 +6,7 @@ package JavaSE;
  * @Date: 2022/7/31 14:48
  * @Version 1.0
  */
-public class Java23 {
+public class java23 {
     public static void main(String[] args) {
         hanNuoTa(1,'A','B','C');
         System.out.println();

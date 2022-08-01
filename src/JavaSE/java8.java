@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @Version 1.0
  * 输出n*n的乘法口诀表，n由用户输入。
  */
-public class Java8 {
+public class java8 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();

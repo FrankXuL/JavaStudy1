@@ -6,7 +6,7 @@ package JavaSE;
  * @Date: 2022/7/30 14:44
  * @Version 1.0
  */
-public class Java14 {
+public class java14 {
     public static void main(String[] args) {
         int a = Factorial2(3);
         System.out.println(Factorial2(3));

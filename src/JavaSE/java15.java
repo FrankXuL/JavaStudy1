@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 求斐波那契数列的第n项。(迭代实现)
  */
-public class Java15 {
+public class java15 {
     public static void main(String[] args) {
         System.out.println(fib(3));
     }

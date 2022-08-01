@@ -7,7 +7,7 @@ package JavaSE;
  * @Version 1.0
  * 递归求 1 + 2 + 3 + ... + 10
  */
-public class Java19 {
+public class java19 {
     public static void main(String[] args) {
         System.out.println(fun(10));
     }

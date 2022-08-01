@@ -6,7 +6,7 @@ package JavaSE;
  * @Date: 2022/7/31 14:56
  * @Version 1.0
  */
-public class Java24 {
+public class java24 {
     public static void main(String[] args) {
         int[] arr = new int[101];
         for (int i = 1; i <= 100; i++) {
