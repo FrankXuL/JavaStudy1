@@ -9,10 +9,22 @@ package JavaSE;
  */
 public class Java31 {
     public static void main(String[] args) {
-        int[] arr=new int[]{1,2,2,3,3,4,4};
-
+        int[] arr = new int[]{1, 2, 2, 3, 3, 4, 4};
+        search(arr);
     }
-    public static int search(int[] arr){
+
+    public static void search(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int tmp=0;
+            for (int j = 0; j < arr.length; j++) {
+                 if (arr[i] ==arr[j]){
+                     tmp++;
+                 }
+            }
+            if(tmp==1){
+                System.out.println(arr[i]);
+            }
+        }
 
     }
 }
