@@ -3,7 +3,7 @@ package JavaSE;
 import java.util.Scanner;
 
 /**
- * @title: java35
+ * @title: java34
  * @Author Xu
  * @Date: 2022/8/4 23:24
  * @Version 1.0
