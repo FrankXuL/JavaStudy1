@@ -18,6 +18,7 @@ public class Example {
         String name = scanner.next();
         System.out.println("请输入密码: ");
         String password = scanner.next();
+
         login(name,password);
     }
 
