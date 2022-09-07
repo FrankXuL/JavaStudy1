@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Author Xu
  * @Date: 2022/7/28 15:01
  * @Version 1.0
- * 获取一个数二进制序列中所有的偶数位和奇数位，分别输出二进制序列
+ *          获取一个数二进制序列中所有的偶数位和奇数位，分别输出二进制序列
  */
 public class java11 {
     public static void main(String[] args) {
@@ -36,5 +36,6 @@ public class java11 {
             System.out.print(arr[i]);
 
         }
+        scanner.close();
     }
 }
