@@ -14,8 +14,7 @@ public class MyArrayListTest {
         myArrayList.add(3);
         myArrayList.add(4);
         myArrayList.display();
-        boolean contains = myArrayList.contains(2);
-        System.out.println(contains);
+        System.out.println(myArrayList.contains(2));
         myArrayList.set(1,6);
         myArrayList.display();
         myArrayList.clear();

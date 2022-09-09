@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @Date: 2022/9/9 20:07
  * @Version 1.0
  */
+@SuppressWarnings("all")
 public class MyArrayList<E> {
     private E[] value;
     private int usedsize;
@@ -93,27 +94,43 @@ public class MyArrayList<E> {
     }
 
     // 给 pos 位置的元素设为 value
-    public void set(int pos, E value) {
+    public void set(int pos, E value) throws Exception {
+        if (isEmpty()) {
+            throw new Exception("表为空");
+        }
+        if (pos < 0 || pos > usedsize) {
+            throw new Exception("更新位置不合法");
+        }
         this.value[pos] = value;
     }
 
     //删除第一次出现的关键字key
-    public void remove(int toRemove) {
-        for (int i = 0; i < usedsize; i++) {
-            if (value[i].equals(toRemove)) {
-                value[i] = null;
-                return;
-            }
+    public void remove(E toRemove) throws Exception {
+        if (isEmpty()) {
+            throw new Exception("表为空");
         }
+        int index = indexOf(toRemove);
+        if (index == -1) {
+            throw new Exception("要删除的元素不存在");
+        }
+
+        for (int j = index; j < usedsize - 1; j++) {
+            this.value[j] = this.value[j + 1];
+        }
+        this.usedsize--;
     }
 
     // 获取顺序表长度
     public int size() {
-        return usedsize;
+        return this.usedsize;
     }
 
     // 清空顺序表
     public void clear() {
-        this.value = (E[]) new Object[usedsize];
+        for (int i = 0; i < this.usedsize; i++) {
+            this.value[i] = null;
+        }
+        //this.value = (E[]) new Object[this.usedsize];
+        usedsize = 0;
     }
 }
