@@ -34,17 +34,38 @@ public class MySingleList<E> {
     }
 
     public void display() {
+        ListNode cur = this.head;
+        if (cur == null) {
+            return;
+        }
+        while (cur != null) {
+            System.out.println(cur.value + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
 
+    public void display(ListNode head) {
+        ListNode cur = head;
+        if (cur == null) {
+            return;
+        }
+        while (cur != null) {
+            System.out.println(cur.value + " ");
+            cur = cur.next;
+        }
+        System.out.println();
     }
 
     public void clear() {
-
+        this.head = null;
     }
 
     //头插法
     public void addFirst(E data) {
-        ListNode<E> cur =new ListNode<>(data);
-
+        ListNode<E> cur = new ListNode<>(data);
+        cur.next = this.head;
+        this.head = cur;
     }
 
 
