@@ -221,4 +221,41 @@ public class MySingleList {
         }
         return slow;
     }
+
+    //判断链表是否为回文结构
+    public boolean chkPalindrome(ListNode head) {
+        if(head == null){
+            return  false;
+        }
+        if(head.next == null){
+            return  true;
+        }
+        //1.找到中间节点
+        ListNode fast = head;
+        ListNode slow = head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        //2.翻转后半链表
+        ListNode cur = slow.next;
+        while(cur != null){
+            ListNode curNext = cur.next;
+            cur.next = slow;
+            slow = cur;
+            cur =curNext;
+        }
+        //3.判断回文
+        while(head != slow){
+            if(head.value != slow.value){
+                return false;
+            }
+            if (head.next == slow){
+                return  true;
+            }
+            head = head.next;
+            slow = slow.next;
+        }
+        return  true;
+    }
 }
