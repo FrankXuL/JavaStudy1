@@ -22,67 +22,151 @@ public class MyLinkedList {
 
     //头插法
     public void addFirst(int data) {
-        ListNode cur = new ListNode(data);
+        ListNode node = new ListNode(data);
         if (this.head == null) {
-            this.head = cur;
-            this.tail = cur;
-            return;
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.next = this.head;
+            this.head.prev = node;
+            head = node;
         }
-        cur.next = this.head;
-        this.head.prev = cur;
-        head = cur;
     }
 
     //尾插法
-    public void addLast(int data){
-        ListNode cur = new ListNode(data);
+    public void addLast(int data) {
+        ListNode node = new ListNode(data);
         if (this.head == null) {
-            this.head = cur;
-            this.tail = cur;
-            return;
+            this.head = node;
+            this.tail = node;
+        } else {
+            tail.next = node;
+            node.prev = tail;
+            tail = node;
         }
 
     }
 
     //任意位置插入,第一个数据节点为0号下标
-    public boolean addIndex(int index, int data){
-        return false;
-    }
-
-    private ListNode FindIndexNode(int index){
-        ListNode cur = head;
-        while(cur != null){
-
+    public void addIndex(int index, int data) {
+        if (index < 0 || index > size()) {
+            throw new RuntimeException("插入位置不合法");
         }
-        return null;
+        if (index == 0) {
+            addFirst(data);
+            return;
+        }
+        if (index == size()) {
+            addLast(data);
+            return;
+        }
+        ListNode cur = FindIndexNode(index);
+        ListNode node = new ListNode(data);
+        node.next = cur;
+        cur.prev.next = node;
+        node.prev = cur.prev;
+        cur.prev = node;
     }
+
+    private ListNode FindIndexNode(int index) {
+        ListNode cur = head;
+        while (index != 0) {
+            cur = cur.next;
+            index--;
+        }
+        return cur;
+    }
+
     //查找是否包含关键字key是否在单链表当中
-    public boolean contains(int key){
+    public boolean contains(int key) {
+        ListNode cur = this.head;
+        while (cur != null) {
+            if (cur.val == key) {
+                return true;
+            }
+            cur = cur.next;
+        }
         return false;
     }
 
     //删除第一次出现关键字为key的节点
-    public void remove(int key){
-
+    public void remove(int key) {
+        ListNode cur = this.head;
+        while (cur != null) {
+            //找到删除结点
+            if (cur.val == key) {
+                //如果删除结点为头结点
+                if (cur == head) {
+                    head = head.next;
+                    if (head != null) {
+                        //头结点的前驱结点为空
+                        head.prev = null;
+                    } else {
+                        //已经到达尾巴结点了
+                        tail = null;
+                    }
+                } else {
+                    cur.prev.next = cur.next;
+                    if (cur.next != null) {
+                        cur.next.prev = cur.prev;
+                    } else {
+                        this.tail = cur.prev;
+                    }
+                }
+                return;
+            }
+            cur = cur.next;
+        }
     }
 
     //删除所有值为key的节点
-    public void removeAllKey(int key){
-
+    public void removeAllKey(int key) {
+        ListNode cur = this.head;
+        while (cur != null) {
+            if (cur.val == key) {
+                if (cur == head) {
+                    head = head.next;
+                    if (head != null) {
+                        head.prev = null;
+                    } else {
+                        tail = null;
+                    }
+                } else {
+                    cur.prev.next = cur.next;
+                    if (cur.next != null) {
+                        cur.next.prev = cur.prev;
+                    } else {
+                        this.tail = cur.prev;
+                    }
+                }
+            }
+            cur = cur.next;
+        }
     }
 
     //得到单链表的长度
-    public int size(){
-        return -1;
-    }
-
-    public void display(){
-
-    }
-
-    public void clear(){
+    public int size() {
+        int count = 0;
         ListNode cur = this.head;
-        while(cur != null){
+        while (cur != null) {
+            cur = cur.next;
+            count++;
+        }
+        return count;
+    }
+
+    public void display() {
+        ListNode cur = this.head;
+        while (cur != null) {
+            System.out.print(cur.val + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+
+    public void clear() {
+        ListNode cur = this.head;
+        while (cur != null) {
             ListNode curNext = cur.next;
             cur.next = null;
             cur.prev = null;
