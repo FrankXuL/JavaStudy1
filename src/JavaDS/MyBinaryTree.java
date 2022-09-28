@@ -166,10 +166,29 @@ public class MyBinaryTree {
     }
 
 
-    public List<List<Integer>> levelOrder2(TreeNode root) {
-        List<List<Integer>> list = new ArrayList<>();
-        //如何确定每一层？
-        return list;
+    public List<List<Character>> levelOrder2(TreeNode root) {
+        List<List<Character>> ret = new ArrayList<List<Character>>();
+        if (root == null) {
+            return null;
+        }
+        Deque<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            List<Character> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = queue.poll();
+                level.add(cur.val);
+                if(cur.left != null){
+                    queue.offer(cur.left);
+                }
+                if(cur.right != null){
+                    queue.offer(cur.right);
+                }
+            }
+            ret.add(level);
+        }
+        return ret;
     }
 
     // 判断一棵树是不是完全二叉树
