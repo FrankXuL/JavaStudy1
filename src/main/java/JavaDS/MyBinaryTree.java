@@ -11,6 +11,7 @@ import java.util.List;
  * @Date: 2022/9/25 11:11
  * @Version 1.0
  */
+@SuppressWarnings({"all"})
 public class MyBinaryTree {
     public TreeNode root;
 

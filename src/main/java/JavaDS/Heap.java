@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @Date: 12/10/2022 下午 8:32
  * @Version 1.0
  */
+@SuppressWarnings({"all"})
 public class Heap {
     public int[] elem;
 
