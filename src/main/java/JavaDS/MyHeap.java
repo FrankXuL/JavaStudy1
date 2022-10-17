@@ -9,14 +9,14 @@ import java.util.Arrays;
  * @Version 1.0
  */
 @SuppressWarnings({"all"})
-public class Heap {
+public class MyHeap {
     public int[] elem;
 
     public int usedSize;//有效的数据个数
 
     public static final int DEFAULT_SIZE = 10;
 
-    public Heap() {
+    public MyHeap() {
         elem = new int[DEFAULT_SIZE];
     }
 
@@ -113,7 +113,7 @@ public class Heap {
     }
 
     public static void main(String[] args) {
-        Heap heap = new Heap();
+        MyHeap heap = new MyHeap();
         int[] array = {1, 8, 5, 6, 9, 13, 15, 78, 65, 98};
         heap.initElem(array);
         for (int i = 0; i < heap.elem.length; i++) {
