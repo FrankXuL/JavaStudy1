@@ -407,7 +407,7 @@ public class sort {
         }
     }
 
-    public static void mergeSort(int[] array) {
+    public static void MergeSort1(int[] array) {
         int gap = 1;
         while (gap < array.length){
             for (int i = 0; i < array.length; i += gap*2) {
