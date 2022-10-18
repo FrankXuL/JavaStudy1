@@ -94,15 +94,15 @@ public class MyArrayList<E> {
     }
 
     // 给 pos 位置的元素设为 value
-    public void set(int pos, E value) throws Exception {
-        if (isEmpty()) {
-            throw new Exception("表为空");
+        public void set(int pos, E value) throws Exception {
+            if (isEmpty()) {
+                throw new Exception("表为空");
+            }
+            if (pos < 0 || pos > usedsize) {
+                throw new Exception("更新位置不合法");
+            }
+            this.value[pos] = value;
         }
-        if (pos < 0 || pos > usedsize) {
-            throw new Exception("更新位置不合法");
-        }
-        this.value[pos] = value;
-    }
 
     //删除第一次出现的关键字key
     public void remove(E toRemove) throws Exception {
