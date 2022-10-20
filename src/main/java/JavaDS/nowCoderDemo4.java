@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @Date: 2022/9/8 22:31
  * DD5 进制转换
  */
+@SuppressWarnings({"all"})
 public class nowCoderDemo4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

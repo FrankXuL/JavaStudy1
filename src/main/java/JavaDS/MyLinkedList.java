@@ -6,6 +6,7 @@ package JavaDS;
  * @Date: 2022/9/21 19:08
  * @Version 1.0
  */
+@SuppressWarnings({"all"})
 public class MyLinkedList {
     static class ListNode {
         public int val;

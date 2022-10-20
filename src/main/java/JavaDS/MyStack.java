@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @Date: 2022/9/23 21:32
  * @Version 1.0
  */
+@SuppressWarnings({"all"})
 public class MyStack {
     int[] array;
     int size;

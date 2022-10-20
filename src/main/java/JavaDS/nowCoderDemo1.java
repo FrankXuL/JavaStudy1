@@ -9,6 +9,7 @@ import java.util.Scanner;
  * https://www.nowcoder.com/questionTerminal/248ccf8b479c49a98790db17251e39bb?f=discussion
  * 来源：牛客网
  */
+@SuppressWarnings({"all"})
 public class nowCoderDemo1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

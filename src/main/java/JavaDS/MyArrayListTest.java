@@ -6,6 +6,7 @@ package JavaDS;
  * @Date: 2022/9/9 21:03
  * @Version 1.0
  */
+@SuppressWarnings({"all"})
 public class MyArrayListTest {
     public static void main(String[] args) throws Exception {
         MyArrayList<Integer>  myArrayList = new MyArrayList<>();

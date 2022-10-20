@@ -8,6 +8,7 @@ import java.util.Stack;
  * @Date: 2022/9/8 22:22
  * WY33 计算糖果
  */
+@SuppressWarnings({"all"})
 public class nowCoderDemo3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
