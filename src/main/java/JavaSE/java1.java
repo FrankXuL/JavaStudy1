@@ -1,5 +1,6 @@
 package JavaSE;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -18,16 +19,16 @@ public class java1 {
         if (num <= 2) {
             System.out.println("该数是一个素数");
         } else {
-            for (int i = 2; i < num; i++){
-                if (num % i == 0){
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) {
                     flag = false;
                     break;
                 }
             }
         }
-        if(flag){
+        if (flag) {
             System.out.println("该数是一个素数");
-        }else {
+        } else {
             System.out.println("该数不是一个素数");
         }
     }
