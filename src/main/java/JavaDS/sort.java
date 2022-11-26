@@ -139,9 +139,6 @@ public class sort {
             }
             //更新最小值
             if (minIndex != left) {
-                //int tmp = array[left];
-                //array[left] = array[minIndex];
-                //array[minIndex] = tmp;
                 swap(array, minIndex, left);
 
             }
@@ -152,9 +149,6 @@ public class sort {
             }
             //更新最大值
             if (maxIndex != right) {
-                //int tmp = array[right];
-                //array[right] = array[maxIndex];
-                //array[maxIndex] = tmp;
                 swap(array, maxIndex, right);
             }
             left++;
