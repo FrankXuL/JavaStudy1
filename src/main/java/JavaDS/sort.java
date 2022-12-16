@@ -9,7 +9,7 @@ import java.util.Stack;
  * @Date: 12/10/2022 下午 9:01
  * @Version 1.0
  */
-@SuppressWarnings({"all"})
+@SuppressWarnings("all")
 public class sort {
     public static void main(String[] args) {
         int[] arr = {13, 55, 14, 87, 1, 2, 8};
@@ -61,7 +61,6 @@ public class sort {
                 if (array[j] > tmp) {
                     array[j + 1] = array[j];
                 } else {
-                    //array[j+1] = tmp;
                     break;
                 }
             }

@@ -17,6 +17,8 @@
         <fileset id="fileset" name="Spring Config" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/spring-config.xml</file>
           <file>file://$MODULE_DIR$/src/main/java/Spring/config/UserConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/HeiMa/Spring/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
         </fileset>
       </configuration>
     </facet>
